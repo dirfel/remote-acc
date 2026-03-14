@@ -1,0 +1,21 @@
+# aqui adiciono tudo que não quero que seja enviado para o repositório, como arquivos de configuração, arquivos de log, arquivos temporários, etc.
+
+# arquivos e diretórios de configuração do ambiente virtual
+venv/
+
+# arquivos de configuração do pyinstaller
+*.spec
+# arquivos de log
+*.log
+# arquivos temporários
+*.tmp
+*.temp
+# arquivos de cache
+__pycache__/
+*.pyc
+# arquivos de configuração do editor de código
+.vscode/
+.idea/
+# arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db

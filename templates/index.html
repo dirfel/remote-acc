@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle Remoto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Criarei um div de tamanho fixo de 720 px de altula e largura igual a da tela com os elementos internos centralizados -->
+    <div class="stream-container">
+        <img id="stream" src="" alt="stream">
+         <!-- style="width: 100%; max-width: 1280px; height: 720px; max-height: 720px;" -->
+    </div>
+    <!-- vou criar dois div lado a lado com largura de 40% cada e centralizado na tela -->
+    <div id="comandos" style="display: flex; justify-content: center; gap: 20px;">
+        <div class="comando-texto">
+            <input id="texto" placeholder="Digite algo...">
+            <button onclick="enviarTexto()">Enviar</button>
+        </div>
+        <div class="comando-botoes">
+            <button onclick="enviarComando('home')">Home</button>
+            <button onclick="enviarComando('up')">↑</button>
+            <button onclick="enviarComando('end')">End</button>
+            <button onclick="enviarComando('left')">←</button>
+            <button onclick="enviarComando('down')">↓</button>
+            <button onclick="enviarComando('right')">→</button>
+            <button onclick="enviarComando('pageup')">PgUp</button>
+            <button onclick="enviarComando('tab')">Tab</button>
+            <button onclick="enviarComando('pagedown')">PgDn</button>
+            <button onclick="enviarComando('esc')">Esc</button>
+            <button onclick="enviarComando('backspace')">Backspace</button>
+            <button onclick="enviarComando('delete')">Delete</button>
+            <button onclick="enviarComando('enter')">Enter</button>
+        </div>
+        <div class="comando-fps">
+            <label for="fps">Frames por segundo:</label>
+            <input type="number" id="fps" step="0.1" min="0.1" max="5" value="2">
+            <button onclick="ajustarFPS()">Aplicar</button>
+        </div>
+
+    <div style="width: 10%;">
+        <button onclick="encerrarServidor()" style="background:red; color:white;">Encerrar acesso remoto</button>
+    </div>
+    
+    <!-- <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script> -->
+
+    <script src="{{ url_for('static', filename='socket.io.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
