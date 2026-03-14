@@ -37,9 +37,9 @@ Remote-ACC é um aplicativo de acesso remoto que permite controlar um computador
 
 ### Opção 1: Via GUI (Recomendado)
 
-1. Execute o arquivo `gui.py`:
+1. Execute o arquivo `gui.pyw`:
    ```
-   python gui.py
+   python gui.pyw
    ```
 2. Na interface gráfica:
    - Clique em "Iniciar Servidor".
